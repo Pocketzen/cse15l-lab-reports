@@ -1,6 +1,6 @@
 # Lab 1 Report
 ## Allen Vu  
-Note: terminal commands inside the codeblocks were used in the edstem workspace
+Note: terminal commands inside the code blocks were used in the edstem workspace
 
 ## 1. cd, ls, and cat commands without any arguments  
 ```
@@ -14,15 +14,15 @@ when cd has no argument it **returns** to the home directory
 [user@sahara ~]$ ls
 lecture1
 ```
-working directory: /home
+working directory: /home  
 not an error  
 command ls checks the list of files inside /home which there is one called lecture1 
 
 ```
 [user@sahara ~]$ cat
 ```
-working directory: /home
-not an error (it would be uncanny not to use it without any arguments regardless)
+working directory: /home  
+not an error (it would be uncanny not to use it without any arguments regardless)  
 the cat command is rather special when it has no arguments  
 it waits for keyboard inputs and repeats any input after by displaying it
 until you end it using *ctrl+d* to exit and continue a new command
@@ -32,7 +32,7 @@ until you end it using *ctrl+d* to exit and continue a new command
 [user@sahara ~/lecture1]$
 ```
 working directory: /home  
-not an error
+not an error  
 cd command changes the directory in which the argument is lecture1  
 line 2 shows the working directory is now /home/lecture1  
 ```
@@ -40,15 +40,15 @@ line 2 shows the working directory is now /home/lecture1
 de.txt  en-us.txt  es-mx.txt  zh-cn.txt
 ```
 working directory: /home  
-not an error
-the ls command checks from the path /home/lecture1/messages  
-and lists the files inside that path which were text files  
+not an error   
+the ls command checks from the path /home/lecture1/messages   
+and lists the files inside that path which were text files    
 ```
 [user@sahara ~]$ cat lecture1
 cat: lecture1: Is a directory
 ```
 working directory: /home  
-not an error
+not an error  
 the command concatenates and prints the content of /home/lecture1
 from line 2, lecture1 is a directory  
 
@@ -58,7 +58,7 @@ from line 2, lecture1 is a directory
 bash: cd: lecture1/messages/en-us.txt: Not a directory
 ```
 working directory: /home  
-error
+error  
 the argument causes an error because the file cannot be used as a working directory  
 ```
 [user@sahara ~]$ ls lecture1/messages/en-us.txt
@@ -73,8 +73,8 @@ if it was a directory it would list other files or if the directory was empty it
 Hello World
 ```
 working directory: /home  
-not an error
-the command reads the file's dat and print's its contents in the terminal  
+not an error  
+the command reads the file's data and prints its contents in the terminal  
 in this case, from line 2, it was "Hello World"
 
 
