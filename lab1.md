@@ -25,8 +25,8 @@ working directory: /home
 not an error (it would be uncanny not to use it without any arguments regardless)  
 the cat command is rather special when it has no arguments  
 it waits for keyboard inputs and repeats any input after by displaying it
-until you end it using *ctrl+d* to exit and continue a new command
-## 2. cd, ls, and cat commands using a path to a directory as an argument  
+until you end it using *ctrl+d* to exit and continue a new command  
+## 2. cd, ls, and cat commands using a path to a directory as an argument    
 ```
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$
@@ -52,7 +52,7 @@ not an error
 the command concatenates and prints the content of /home/lecture1
 from line 2, lecture1 is a directory  
 
-## 3. cd, ls, and cat commands with a patch to a file as an argument  
+## 3. cd, ls, and cat commands using a path to a file as an argument  
 ```
 [user@sahara ~]$ cd lecture1/messages/en-us.txt
 bash: cd: lecture1/messages/en-us.txt: Not a directory
