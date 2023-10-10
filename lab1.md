@@ -14,7 +14,9 @@ This was my filesystem:
 ```
 - Working directory: /home/lecture1    
 - When cd has no argument it **returns** to the home directory.  
-- Error? No   
+- Error? No
+
+
 ```
 [user@sahara ~]$ ls
 lecture1
@@ -22,6 +24,8 @@ lecture1
 - Working directory: /home     
 - Command ls checks the list of files inside /home which there is one called lecture1.  
 - Error? No
+
+
 ```
 [user@sahara ~]$ cat
 ```
@@ -40,7 +44,9 @@ until you end it using *ctrl+d* to exit and continue a new command.
 - Working directory: /home  
 - The cd command changes the directory in which the argument is lecture1.  
 Line 2 shows the working directory is now /home/lecture1.  
-- Error? No   
+- Error? No
+
+
 ```
 [user@sahara ~]$ ls lecture1/messages
 de.txt  en-us.txt  es-mx.txt  zh-cn.txt
@@ -48,7 +54,9 @@ de.txt  en-us.txt  es-mx.txt  zh-cn.txt
 - Working directory: /home    
 - The ls command checks from the path /home/lecture1/messages   
 and lists the files inside that path which were text files.  
-- Error? No    
+- Error? No
+
+
 ```
 [user@sahara ~]$ cat lecture1
 cat: lecture1: Is a directory
@@ -66,7 +74,9 @@ bash: cd: lecture1/messages/en-us.txt: Not a directory
 ```
 - Working directory: /home  
 - The bash displays the command cd cannot allow the argument to become a directory.  
-- Error? Yes, the argument causes an error because the file cannot be used as a working directory.    
+- Error? Yes, the argument causes an error because the file cannot be used as a working directory.  
+
+
 ```
 [user@sahara ~]$ ls lecture1/messages/en-us.txt
 lecture1/messages/en-us.txt
@@ -74,8 +84,9 @@ lecture1/messages/en-us.txt
 - Working directory: /home    
 - Line 2 prints the same path argument validating that the path is showing a file rather than a directory.  
 If it was a directory it would list other files or if the directory was empty it would list nothing rather than printing a path.   
-- Error? Yes, there is a behavior, yet the command is impractical knowing the path is not a directory.    
-  
+- Error? Yes, there is a behavior, yet the command is impractical knowing the path is not a directory.
+
+
 ```
 [user@sahara ~]$ cat lecture1/messages/en-us.txt
 Hello World
