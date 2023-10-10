@@ -1,6 +1,10 @@
 # Lab 1 Report  
 ## Allen Vu     
-Note: terminal commands inside the code blocks were used in the edstem workspace and examples were used in markdown code blocks instead of screenshots for this page.  
+Note: terminal commands inside the code blocks were used in the edstem workspace and examples were used in markdown code blocks instead of screenshots for this page. 
+
+This was my filesystem:
+
+![Image](lab1_workspace.png)  
 
 ---  
 ## 1. cd, ls, and cat commands without any arguments  
@@ -10,15 +14,14 @@ Note: terminal commands inside the code blocks were used in the edstem workspace
 ```
 - Working directory: /home/lecture1    
 - When cd has no argument it **returns** to the home directory.  
-- Error? No
+- Error? No   
 ```
 [user@sahara ~]$ ls
 lecture1
 ```
 - Working directory: /home     
 - Command ls checks the list of files inside /home which there is one called lecture1.  
-- Error? No 
-
+- Error? No
 ```
 [user@sahara ~]$ cat
 ```
