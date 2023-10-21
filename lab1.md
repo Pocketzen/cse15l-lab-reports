@@ -22,7 +22,7 @@ This was my filesystem:
 lecture1
 ```
 - Working directory: /home     
-- Command ls checks the list of files inside /home which there is one called lecture1.  
+- Command ls checks the list of files and directories inside /home. In this case, the directory lecture1 is in /home.  
 - Error? No
 
 
