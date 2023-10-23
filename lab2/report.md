@@ -42,6 +42,8 @@ class StringServer {
         Server.start(port, new Handler()); 
     }
 }
+
+
 ```
 ![Image](part1_img1.png)  
 - *Which methods in your code are called?*  
@@ -52,8 +54,8 @@ class StringServer {
   A: if the request follows the designated query (/add-message?s=<string>) in the updated URI,  
   the integer field increments to count the list     
   and the <string> is added as another word on the site.    
-
-
+  
+  
 ![Image](part2_img2.png)  
 - *Which methods in your code are called?*  
   A: public String handleRequest(URI url) was called.  
@@ -64,7 +66,7 @@ class StringServer {
   the integer field increments to count the list     
   and the <string> is added as another word on the site.     
 
-===
+---
 
 ## Part 2  
 
