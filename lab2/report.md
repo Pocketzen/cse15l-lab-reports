@@ -1,6 +1,7 @@
 # Lab 2 Report  
 ## Allen Vu     
 
+---  
 ## Part 1  
 Code:  
 ```
