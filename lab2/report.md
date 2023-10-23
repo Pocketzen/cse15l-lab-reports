@@ -56,7 +56,7 @@ class StringServer {
   and the <string> is added as another word on the site.    
   
   
-![Image](part2_img2.png)  
+![Image](part1_img2.png)  
 - *Which methods in your code are called?*  
   A: public String handleRequest(URI url) was called.  
 - *What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
@@ -68,8 +68,20 @@ class StringServer {
 
 ---  
 ## Part 2  
-The path to the private key for your SSH key for logging into ieng6
+![Image](part2_img1.png)  
+- The path to the private key for my SSH key for logging into ieng6:
+```
+/Users/allenvu/.ssh/id_rsa.pub 
+```
+  
+![Image](part2_img2.png) 
+- The path to the public key for my SSH key for logging into ieng6:  
+```
+~/cs15lfa23ol@ieng6-202/.ssh/id_rsa.pub
+```  
+![Image](part2_img3.png)
+- A terminal interaction where you log into ieng6 with your course-specific account without being asked for a password.  
 
-The path to the public key for your SSH key for logging into ieng6
-
+---
+## Part 3
 
