@@ -75,8 +75,8 @@ cat: lecture1: Is a directory
 - Working directory: /home     
 - The command concatenates and prints the content of /home/lecture1.  
 From line 2, lecture1 is a directory.  
-- Error? Yes, the cat command is intended to print the output of a file rather  
-  than noting a file was actually a directory instead     
+- Error? Yes, the cat command is intended to print the output of a file that's not a directory.  
+         A directory does not need data to be read and outputted using the cat command.  
 
 ---  
 ## 3. cd, ls, and cat commands using a path to a file as an argument  
