@@ -83,5 +83,11 @@ class StringServer {
 - A terminal interaction where you log into ieng6 with your course-specific account without being asked for a password.  
 
 ---
-## Part 3
-
+## Part 3  
+*In a couple of sentences, describe something you learned from the lab in week 2 or 3 that you didn’t know before.*  
+A: Something I didn't know before was how easily accessible you're able to connect to a remote server.  
+   The SSH (Secure Shell) command requires only the hostname, username, and password to connect to a remote computer  
+   and control/access files from a local one. A more secure way to log in is using SSH keys which is an access credential  
+   where sharing your local public SSH key and transferring a secure copy will create an automatic communication  
+   without needing to enter a password.  
+   
