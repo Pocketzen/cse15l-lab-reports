@@ -44,25 +44,25 @@ class StringServer {
 }
 ```
 ![Image](part1_img1.png)  
-- Which methods in your code are called?  
+- *Which methods in your code are called?*  
   A: public String handleRequest(URI url) was called.  
-- What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
-  A: a uniform resource identifier (URI) was an argument, an integer and string field was needed for the Handler class and its methods.   
-- How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.  
+- *What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
+  A: a uniform resource identifier (URI) was an argument, an integer and string field was needed for the Handler class and its methods.*   
+- *How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.*  
   A: if the request follows the designated query (/add-message?s=<string>) in the updated URI,  
   the integer field increments to count the list     
   and the <string> is added as another word on the site.    
 
 
 ![Image](part2_img2.png)  
-- Which methods in your code are called?  
+- *Which methods in your code are called?*  
   A: public String handleRequest(URI url) was called.  
-- What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
-  A: a uniform resource identifier (URI) was an argument, an integer and string field was needed for the Handler class and its methods.   
-- How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.  
+- *What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
+  A: a uniform resource identifier (URI) was an argument, an integer and string field was needed for the Handler class and its methods.*   
+- *How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.*  
   A: if the request follows the designated query (/add-message?s=<string>) in the updated URI,  
   the integer field increments to count the list     
-  and the <string> is added as another word on the site.  
+  and the <string> is added as another word on the site.     
 
 ===
 
