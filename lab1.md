@@ -28,12 +28,20 @@ lecture1
 
 ```
 [user@sahara ~]$ cat
+the next line
+the next line
+it looks like the command made my first input "the next line" repeat/print       
+it looks like the command made my first input "the next line" repeat/print
+looks like it did it again until I either do ctrl+c / ctrl+d to stop  
+looks like it did it again until I either do ctrl+c / ctrl+d to stop  
+^C
+[user@sahara ~]$ # I can now run new commands again
 ```
 - Working directory: /home   
-- The cat command is rather special when it has no arguments.    
-It waits for keyboard inputs and repeats any input after by displaying it  
-until you end it using *ctrl+d* to exit and continue a new command.  
-- Error? No, it would be uncanny not to use it without any arguments regardless  
+- The cat command reads data from the user and writes a standard output when it has no arguments.      
+It waits for keyboard inputs and prints the input on the next line  
+until you end it using *ctrl+c* or *ctrl+d* to exit and continue a new command.  
+- Error? No. 
 
 ---  
 ## 2. cd, ls, and cat commands using a path to a directory as an argument    
@@ -42,8 +50,11 @@ until you end it using *ctrl+d* to exit and continue a new command.
 [user@sahara ~/lecture1]$
 ```
 - Working directory: /home  
-- The cd command changes the directory in which the argument is lecture1.  
-Line 2 shows the working directory is now /home/lecture1.  
+- The cd command moves your current working directory to the one stated in the argument.
+  In this directory, /home has a subdirectory within it called lecture1.
+  We're able to change working directories from subdirectory to parent directory
+  or another path (relative or absolute) as long as the argument is a directory and not a file.    
+  Line 2 shows the working directory is now /home/lecture1 as per our argument for the cd command, lecture1.  
 - Error? No
 
 
@@ -64,7 +75,8 @@ cat: lecture1: Is a directory
 - Working directory: /home     
 - The command concatenates and prints the content of /home/lecture1.  
 From line 2, lecture1 is a directory.  
-- Error? No     
+- Error? Yes, the cat command is intended to print the output of a file rather  
+  than noting a file was actually a directory instead     
 
 ---  
 ## 3. cd, ls, and cat commands using a path to a file as an argument  
@@ -72,10 +84,13 @@ From line 2, lecture1 is a directory.
 [user@sahara ~]$ cd lecture1/messages/en-us.txt
 bash: cd: lecture1/messages/en-us.txt: Not a directory
 ```
-- Working directory: /home  
-- The bash displays the command cd cannot allow the argument to become a directory.  
-- Error? Yes, the argument causes an error because the file cannot be used as a working directory.  
-
+- Working directory: /home
+- The bash is returning that the cd command is invalid because the path argument leads to a file and not a directory.   
+  Therefore, the command cannot change the working directory to such paths.  
+- Error? Yes, the argument causes an error because the path "lecture1/messages/en-us.txt" is a file.  
+         A directory is a unique type of file and in this instance using a .txt file cannot be used  
+         for a cd command argument. Any path whether relative or absolute as long as it directs to a directory  
+         would work.  
 
 ```
 [user@sahara ~]$ ls lecture1/messages/en-us.txt
