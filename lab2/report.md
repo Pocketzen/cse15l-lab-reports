@@ -43,7 +43,7 @@ class StringServer {
     }
 }
 ```
-![Image](part1_img.png)  
+![Image](part1_img1.png)  
 - Which methods in your code are called?  
   A: public String handleRequest(URI url) was called.  
 - What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
@@ -54,7 +54,7 @@ class StringServer {
   and the <string> is added as another word on the site.    
 
 
-![Image](part2_img.png)  
+![Image](part2_img2.png)  
 - Which methods in your code are called?  
   A: public String handleRequest(URI url) was called.  
 - What are the relevant arguments to those methods, and the values of any relevant fields of the class?  
