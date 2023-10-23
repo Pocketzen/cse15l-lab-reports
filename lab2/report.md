@@ -66,9 +66,10 @@ class StringServer {
   the integer field increments to count the list     
   and the <string> is added as another word on the site.     
 
----
-
+---  
 ## Part 2  
+The path to the private key for your SSH key for logging into ieng6
 
+The path to the public key for your SSH key for logging into ieng6
 
 
