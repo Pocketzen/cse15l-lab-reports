@@ -43,8 +43,8 @@ public class ArrayTests {
   }
 }
 ```  
-* The symptom, as the output of running the tests:      
-![Image](part1_img1.png)  
+* The symptom, as the output of running the tests:
+  {insert img here} 
 * The bug (code before fix):    
 ```
 public class ArrayExamples {
