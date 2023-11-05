@@ -1,10 +1,10 @@
-# Lab 3 Report  
+# Lab Report 3  
 ## Allen Vu     
 
 ---  
 ## Part 1 - Bugs
-* `One of the bugs from Week 4's lab:` ArrayExamples.java and ArrayTests.java    
-* `A failure-inducing input for the buggy program, as a JUnit test and any associated code`  
+* One of the bugs from Week 4's lab: ArrayExamples.java and ArrayTests.java    
+* A failure-inducing input for the buggy program, as a JUnit test and any associated code:    
 ```
 public class ArrayTests {
 	@Test 
@@ -22,7 +22,7 @@ public class ArrayTests {
   }
 }
 ```  
-* `An input that doesn't induce a failure, as a JUnit test and any associate code`    
+* An input that doesn't induce a failure, as a JUnit test and any associate code:      
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -43,9 +43,9 @@ public class ArrayTests {
   }
 }
 ```  
-* `The symptom, as the output of running the tests`    
+* The symptom, as the output of running the tests:      
 ![Image](part1_img1.png)  
-* `The bug (code before fix)`  
+* The bug (code before fix):    
 ```
 public class ArrayExamples {
 
@@ -68,7 +68,7 @@ public class ArrayExamples {
 
 }
 ```  
-* `The correction for the bug (fixed code)`    
+* The correction for the bug (fixed code):      
 ```
 public class ArrayExamples {
 
@@ -96,15 +96,14 @@ public class ArrayExamples {
 
 }
 ```  
-* `Briefly describe why the fix addresses the issue.`  
-  A: The two algorithms for swapping the position of an array was initially faulty due to  
-     having a bug such that the test program's failure-inducing input caused it to have symptoms (terminal behavior) of producing a failure result on the JUnit tests rather than an OK result. First, the reverseInPlace() method needed another way of keeping a current index's data before it gets swapped otherwise it gets overwritten and no other data keeps track of it. I chose to use a temporary array that copies the original array and then the the temp array can swap the original array while not losing any integer at each index (algorithm does take more space complexity but patches the bug). The second method reversed() required changes updating between the old array and new array so I assigned the new array to update using the old array unlike the unfixed which did the opposite. Fixing the two methods and running the JUnit test again, the terminal was able to produce OK results for both test methods therefore no symptoms had resulted from the failure-inducing inputs.  
+* Briefly describe why the fix addresses the issue:    
+  A: The two algorithms for swapping the position of an array were initially faulty due to having a bug such that the test program's failure-inducing input caused it to have symptoms (terminal behavior) of producing a failure result on the JUnit tests rather than an OK result. First, the reverseInPlace() method needed another way of keeping a current index's data before it gets swapped otherwise it gets overwritten and no other data keeps track of it. I chose to use a temporary array that copies the original array. Then the temp array can swap the original array while not losing any integer at each index (the algorithm does take more space complexity but patches the bug). The second method reversed() required changes updating between the old array and the new array so I assigned the new array to update using the old array unlike the unfixed which did the opposite. Fixing the two methods and rerunning the JUnit test, the terminal produced test "OK" output for both test methods therefore no symptoms resulted from the failure-inducing inputs, and the tests had passed. 
   
 ---  
 ## Part 2 - Researching Commands  
 `Command options to explore for:` find  
 **1.** `'-type'`  
-Example 1 (directory): Command option -type d specifies locating all and only directories. In this case I used find starting from technical/ as the argument to find directories in it and its subdirectories.    
+Example 1 (directory): Command option -type d specifies locating all and only directories. In this case, I used find starting from technical/ as the argument to find directories in it and its subdirectories.    
 ```
 allenvu@Allens-MacBook-Pro technical % find . -type d 
 .
@@ -119,7 +118,7 @@ allenvu@Allens-MacBook-Pro technical % find . -type d
 ./biomed
 ./911report
 ```  
-Example 2 (file): Command option -type f specifies locating only files using find starting in technical/government/Media/ (I cropped the output and left ellipses to note that since the length was uneccessarily long to show).    
+Example 2 (file): Command option -type f specifies locating only files using find starting in technical/government/Media/ (I cropped the output and left ellipses to note that since the length was unnecessarily long to show).    
 ```
 allenvu@Allens-MacBook-Pro technical % find ./government/Media  -type f
 ./government/Media/Federal_agency.txt
@@ -132,7 +131,7 @@ allenvu@Allens-MacBook-Pro technical % find ./government/Media  -type f
 ...
 ```
 **2.** `'-name'`    
-Example 1 (directory): Command option -name helps to search up files or directories using a keyword as an argument after the command option. To show only directoy I'll use the previous -type in conjunction starting from technical/ and to its subdirectories.  
+Example 1 (directory): Command option -name helps to search up files or directories using a keyword as an argument after the command option. To show only directory I'll use the previous -type in conjunction starting from technical/ and to its subdirectories.  
 ```
 allenvu@Allens-MacBook-Pro technical % find . -type d -name "*"
 .
@@ -147,7 +146,7 @@ allenvu@Allens-MacBook-Pro technical % find . -type d -name "*"
 ./biomed
 ./911report
 ```
-Example 2 (file): Command option -name helps to search up files or directories using a keyword as an argument after the command option. To show only files I'll use the previous -type in conjunction for the subdirectory biomed where I used the arg "1468*.txt" to find any keyword relvant to 1468 and anything after that number (using *).      
+Example 2 (file): Command option -name helps to search up files or directories using a keyword as an argument after the command option. To show only files I'll use the previous -type in conjunction with the subdirectory biomed where I used the arg "1468*.txt" to find any keyword relevant to 1468 and anything after that number (using *).      
 ```
 allenvu@Allens-MacBook-Pro technical % find ./biomed  -type f -name "1468*.txt"
 ./biomed/1468-6708-3-10.txt
@@ -157,7 +156,7 @@ allenvu@Allens-MacBook-Pro technical % find ./biomed  -type f -name "1468*.txt"
 ./biomed/1468-6708-3-1.txt
 ```  
 **3.** `'-not'`  
-Example 1 (directory): Command option -not does the opposite of finding files or directories that are not the argument. I'll use the previous -type in and -name as conjunctions starting from technical/ and to its subdirectories. The keyword "911report" was used where the output ommitted the 911report directory because it was searching directories excluding that keyword (added ellipsis at the end to note how long the output was).  
+Example 1 (directory): Command option -not does the opposite of finding files or directories that are not the argument. I'll use the previous -type in and -name as conjunctions starting from technical/ and to its subdirectories. The keyword "911report" was used where the output omitted the 911report directory because it was searching directories excluding that keyword (added ellipsis at the end to note how long the output was).  
 ```
 allenvu@Allens-MacBook-Pro technical % find . -type d -not -name "911report" 
 .
@@ -184,7 +183,7 @@ allenvu@Allens-MacBook-Pro technical % find ./biomed  -type f -not -name "*-*.tx
 ...
 ```  
 **4.** `'-maxdepth'`  
-Example 1 (directory): Command option -maxdepth sets a upper bound depth of a directory range from the starting directory to how far subdirectories can go. In this case, I used -maxdepth 1 in conjunction with -type d which is only the directories located within /terminal and excludes any subdirectories inside those directories.  
+Example 1 (directory): Command option -maxdepth sets an upper bound depth of a directory range from the starting directory to how far subdirectories can go. In this case, I used -maxdepth 1 in conjunction with -type d which is only the directories located within /terminal and excludes any subdirectories inside those directories.  
 ```
 allenvu@Allens-MacBook-Pro technical % find . -type d  -maxdepth 1
 .
@@ -193,7 +192,7 @@ allenvu@Allens-MacBook-Pro technical % find . -type d  -maxdepth 1
 ./biomed
 ./911report
 ```  
-Example 2 (file): Command option -maxdepth sets a upper bound depth of a directory range from the starting directory to how far subdirectories can go. In this case, I used -maxdepth 1 in conjunction with -type f which is only the files located within /terminal/government. The output resulted in nothing meaning there were no files. I tried maxdepth 2 next and was able to receive a large amount of .txt files in the further subdirectories inside government (added ellipsis in the example to note that the output was long to list all the .txt file in all subdirectories).  
+Example 2 (file): Command option -maxdepth sets an upper bound depth of a directory range from the starting directory to how far subdirectories can go. In this case, I used -maxdepth 1 in conjunction with -type f which is only the files located within /terminal/government. The output resulted in nothing meaning there were no files. I tried maxdepth 2 next and was able to receive a large number of .txt files in the further subdirectories inside government (added an ellipsis in the example to note that the output was long enough to list all the .txt files in all subdirectories).  
 ```
 allenvu@Allens-MacBook-Pro technical % find ./government -type f  -maxdepth 1
 allenvu@Allens-MacBook-Pro technical % find ./government -type f  -maxdepth 2
@@ -207,10 +206,10 @@ allenvu@Allens-MacBook-Pro technical % find ./government -type f  -maxdepth 2
 
 ---  
 ## Citation/Source    
-**`ChatGPT was used for this report for part 2.`**  
-**`I gave 2 prompts to the AI and did not note any specific output change as stated`**
-**`from the syllabus besides perhaps referencing definitions from 4 command options in part 2`**     
-**`Prompt 1: give me 4 interesting/useful command line options for find`**  
+ChatGPT was used for this report for part 2.  
+I gave 2 prompts to the AI.  
+I did not note any specific output change as stated per the syllabus besides referencing definitions from 4 command options in part 2.    
+**Prompt 1: give me 4 interesting/useful command line options for find** 
 ```
 The `find` command is a powerful tool for searching files and directories in a directory hierarchy. Here are four interesting and useful command-line options for `find`:
 ```
@@ -240,7 +239,7 @@ The `find` command is a powerful tool for searching files and directories in a d
 ```
 These options provide flexibility and control when using the `find` command. You can combine them to perform more complex searches and actions, making `find` a versatile tool for managing and searching files in a directory hierarchy.
 ```  
-**`Prompt 2: can you give me more useful find command options`**
+**Prompt 2: can you give me more useful find command options**
 ```
 Certainly! The `find` command in Unix-like operating systems provides a wide range of options to help you search for files and directories in a directory hierarchy. Here are more useful `find` command options:
 ```
@@ -282,7 +281,6 @@ Certainly! The `find` command in Unix-like operating systems provides a wide ran
    ```bash
    find /path/to/search -type f -name "*.txt" -print
    ```
-```
 These options, along with the previously mentioned ones, provide you with a powerful and flexible way to search for files and directories in a directory hierarchy and perform various actions based on your criteria.
-```
+
 ---
