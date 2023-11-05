@@ -236,13 +236,10 @@ The `find` command is a powerful tool for searching files and directories in a d
    ```bash
    find /path/to/search -type f -name "file-to-delete.txt" -exec rm {} \;
    ```
-```
-These options provide flexibility and control when using the `find` command. You can combine them to perform more complex searches and actions, making `find` a versatile tool for managing and searching files in a directory hierarchy.
-```  
-**Prompt 2: can you give me more useful find command options**
-```
+These options provide flexibility and control when using the `find` command. You can combine them to perform more complex searches and actions, making `find` a versatile tool for managing and searching files in a directory hierarchy.  
+
+**Prompt 2: can you give me more useful find command options**  
 Certainly! The `find` command in Unix-like operating systems provides a wide range of options to help you search for files and directories in a directory hierarchy. Here are more useful `find` command options:
-```
 1. `-mtime` and `-mmin`:
    These options allow you to search for files based on their modification time. For example, to find files modified within the last 7 days, you can use:
    ```bash
