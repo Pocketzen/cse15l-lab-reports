@@ -202,9 +202,9 @@ allenvu@Allens-MacBook-Pro technical % find ./government -type f  -maxdepth 2
 ./government/About_LSC/Comments_on_semiannual.txt
 ./government/About_LSC/Special_report_to_congress.txt
 ...
-```  
+```
 
----  
+---
 ## Citation/Source    
 ChatGPT was used for this report for part 2.  
 I gave 2 prompts to the AI.  
