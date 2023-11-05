@@ -209,10 +209,8 @@ allenvu@Allens-MacBook-Pro technical % find ./government -type f  -maxdepth 2
 ChatGPT was used for this report for part 2.  
 I gave 2 prompts to the AI.  
 I did not note any specific output change as stated per the syllabus besides referencing definitions from 4 command options in part 2.    
-**Prompt 1: give me 4 interesting/useful command line options for find** 
-```
+**Prompt 1: give me 4 interesting/useful command line options for find**  
 The `find` command is a powerful tool for searching files and directories in a directory hierarchy. Here are four interesting and useful command-line options for `find`:
-```
 1. `-name`:
    The `-name` option allows you to search for files and directories based on their names. You can use wildcards to specify a pattern. For example, to find all files with the extension ".txt," you can use:
    ```bash
