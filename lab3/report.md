@@ -100,7 +100,7 @@ public class ArrayExamples {
   A: The two algorithms for swapping the position of an array was initially faulty due to  
      having a bug such that the test program's failure-inducing input caused it to have symptoms (terminal behavior) of producing a failure result on the JUnit tests rather than an OK result. First, the reverseInPlace() method needed another way of keeping a current index's data before it gets swapped otherwise it gets overwritten and no other data keeps track of it. I chose to use a temporary array that copies the original array and then the the temp array can swap the original array while not losing any integer at each index (algorithm does take more space complexity but patches the bug). The second method reversed() required changes updating between the old array and new array so I assigned the new array to update using the old array unlike the unfixed which did the opposite. Fixing the two methods and running the JUnit test again, the terminal was able to produce OK results for both test methods therefore no symptoms had resulted from the failure-inducing inputs.  
 
-     ---
+     ---  
      ## Part 2 - Researching Commands  
      `Command to explore:`  
      1.
