@@ -102,7 +102,7 @@ public class ArrayExamples {
 
      ---
      ## Part 2 - Researching Commands  
-     `Command to explore:` grep  
+     `Command to explore:`  
      1.
 
 
