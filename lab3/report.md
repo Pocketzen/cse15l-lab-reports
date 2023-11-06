@@ -2,9 +2,9 @@
 ## Allen Vu     
 
 ---  
-## Part 1 - Bugs
-* One of the bugs from Week 4's lab: ArrayExamples.java and ArrayTests.java    
-* A failure-inducing input for the buggy program, as a JUnit test and any associated code:    
+## Part 1 - Bugs  
+One of the bugs from Week 4's lab: ArrayExamples.java and ArrayTests.java      
+A failure-inducing input for the buggy program, as a JUnit test and any associated code:    
 ```
 public class ArrayTests {
 	@Test 
@@ -22,7 +22,7 @@ public class ArrayTests {
   }
 }
 ```  
-* An input that doesn't induce a failure, as a JUnit test and any associate code:      
+An input that doesn't induce a failure, as a JUnit test and any associate code:      
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -42,10 +42,10 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
 }
-```  
-* The symptom, as the output of running the tests:
-![Image](part1_img1.png)     
-* The bug (code before fix):    
+```    
+The symptom, as the output of running the tests (Failed tests and error stating that the test output had incorrect values at certain indices in the arrays):   
+![Image](part1_img1.png)       
+The bug (code before fix):      
 ```
 public class ArrayExamples {
 
@@ -68,7 +68,7 @@ public class ArrayExamples {
 
 }
 ```  
-* The correction for the bug (fixed code):      
+The correction for the bug (fixed code):      
 ```
 public class ArrayExamples {
 
@@ -96,12 +96,12 @@ public class ArrayExamples {
 
 }
 ```  
-* Briefly describe why the fix addresses the issue:    
-  A: The two algorithms for swapping the position of an array were initially faulty due to having a bug such that the test program's failure-inducing input caused it to have symptoms (terminal behavior) of producing a failure result on the JUnit tests rather than an OK result. First, the reverseInPlace() method needed another way of keeping a current index's data before it gets swapped otherwise it gets overwritten and no other data keeps track of it. I chose to use a temporary array that copies the original array. Then the temp array can swap the original array while not losing any integer at each index (the algorithm does take more space complexity but patches the bug). The second method reversed() required changes updating between the old array and the new array so I assigned the new array to update using the old array unlike the unfixed which did the opposite. Fixing the two methods and rerunning the JUnit test, the terminal produced test "OK" output for both test methods therefore no symptoms resulted from the failure-inducing inputs, and the tests had passed. 
+Briefly describe why the fix addresses the issue:    
+A: The two algorithms for swapping the position of an array were initially faulty due to having a bug such that the test program's failure-inducing input caused it to have symptoms (terminal behavior) of producing a failure result on the JUnit tests rather than an OK result. First, the reverseInPlace() method needed another way of keeping a current index's data before it gets swapped otherwise it gets overwritten and no other data keeps track of it. I chose to use a temporary array that copies the original array. Then the temp array can swap the original array while not losing any integer at each index (the algorithm does take more space complexity but patches the bug). The second method reversed() required changes updating between the old array and the new array so I assigned the new array to update using the old array unlike the unfixed which did the opposite. Fixing the two methods and rerunning the JUnit test, the terminal produced test "OK" output for both test methods therefore no symptoms resulted from the failure-inducing inputs, and the tests had passed. 
   
 ---  
 ## Part 2 - Researching Commands  
-`Command options to explore for:` find  
+Command options to explore for: `find`  
 **1.** `'-type'`  
 Example 1 (directory): Command option -type d specifies locating all and only directories. In this case, I used find starting from technical/ as the argument to find directories in it and its subdirectories.    
 ```
