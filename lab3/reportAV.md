@@ -43,7 +43,7 @@ public class ArrayTests {
   }
 }
 ```    
-The symptom, as the output of running the tests:  
+The symptom, as the output of running the tests (Failed tests and error stating that the test output had incorrect values at certain indices in the arrays):   
 ![Image](part1_img1.png)       
 The bug (code before fix):      
 ```
@@ -101,7 +101,7 @@ A: The two algorithms for swapping the position of an array were initially fault
   
 ---  
 ## Part 2 - Researching Commands  
-Command options to explore for: find  
+Command options to explore for: `find`  
 **1.** `'-type'`  
 Example 1 (directory): Command option -type d specifies locating all and only directories. In this case, I used find starting from technical/ as the argument to find directories in it and its subdirectories.    
 ```
