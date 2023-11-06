@@ -2,8 +2,8 @@
 ## Allen Vu     
 
 ---  
-## Part 1 - Bugs
-One of the bugs from Week 4's lab: ArrayExamples.java and ArrayTests.java    
+## Part 1 - Bugs  
+One of the bugs from Week 4's lab: ArrayExamples.java and ArrayTests.java      
 A failure-inducing input for the buggy program, as a JUnit test and any associated code:    
 ```
 public class ArrayTests {
@@ -101,7 +101,7 @@ A: The two algorithms for swapping the position of an array were initially fault
   
 ---  
 ## Part 2 - Researching Commands  
-`Command options to explore for:` find  
+Command options to explore for: find  
 **1.** `'-type'`  
 Example 1 (directory): Command option -type d specifies locating all and only directories. In this case, I used find starting from technical/ as the argument to find directories in it and its subdirectories.    
 ```
