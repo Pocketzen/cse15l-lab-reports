@@ -43,8 +43,13 @@ public class ArrayTests {
   }
 }
 ```    
-The symptom, as the output of running the tests (Failed tests and error stating that the test output had incorrect values at certain indices in the arrays):   
-![Image](part1_img1.png)       
+The symptom, as the output of running the tests  
+First example using failure-inducing inputs:  
+Displayed failed tests stating that the test output had incorrect values at certain indices in the arrays   
+![Image](part1_img1.png)  
+Second example using non-failure-inducing inputs:   
+Displayed passed tests not showing any failure/symptoms hiding the bug's actual behavior     
+![Image](part1_img2.png)  
 The bug (code before fix):      
 ```
 public class ArrayExamples {
