@@ -21,8 +21,8 @@ results to `vim ListExamples.java`\<enter> command
 to open vim and enter the java file.  
 ![Image](img4.png)  
 
-keys pressed: none  
-just locating where the edit should be made 
+keys pressed: none    
+just locating where the edit should be made   
 ![Image](img5.png)  
   
 keys pressed: \<shift>\<g> to go to the end of file, \<esc> to go back to normal mode  
@@ -31,11 +31,13 @@ keys pressed: \<shift>\<g> to go to the end of file, \<esc> to go back to normal
  
 keys pressed: \<up>\<up>\<enter> to reuse `bash test.sh` command  
 which was 2 up in the search history  
-lastly, the test has now outputed passed results.   
+and the test has now outputed passed results.   
 ![Image](img7.png)  
  
   
-keys pressed: `git add ListExamples.java`\<enter>`git commit -m "updated ListExamples.java through ssh`\<enter>`git push`\<enter> to git add, git commit, and git push commands to GitHub.
+keys pressed: `git add ListExamples.java`\<enter>  
+`git commit -m "updated ListExamples.java through ssh`\<enter>  
+`git push`\<enter> to git add, git commit, and git push commands to GitHub.  
 git add move the individual file ListExamples.java to the staging area  
 git commit to actualize/snapshot the staging area for version history  
 git push to update ieng server repository to remote repository to GitHub   
