@@ -26,7 +26,9 @@ just locating where the edit should be made
 ![Image](img5.png)  
   
 keys pressed: \<shift>\<g> to go to the end of file, \<esc> to go back to normal mode  
-`:set number` to display line number in vim then <6>\<k>\<e>\<x>\<i><2>\<esc> to move to index1 and change it to index2 then go back to normal mode then lastly `:wq` to save and exit.   
+`:set number` to display line number in vim then <6>\<k>\<e>\<x>\<i><2>\<esc> to move to index1 and change it to index2 (<6>\<k> move up 6 times, \<e> go to next word's last character which is 1 in index1, \<x> delete charcter 1, \<i> go into insert mode, \<2> to insert 2,  
+and \<esc> to go back to normal mode)   
+then lastly `:wq`\<enter> to save and exit.   
 ![Image](img6.png)  
  
 keys pressed: \<up>\<up>\<enter> to reuse `bash test.sh` command  
