@@ -3,21 +3,21 @@
 
 ## Part 1 -- Debugging Scenario
 ---  
-Bug in Code for Summation of Strictly Even Indices #312  
+## Bug in Code for Summation of Strictly Even Indices #312
 ![Image](img1.png)   
-Anonymous: I can't seem to find the bug in my code for the summation of an array of even indices only. The failure inducing-input was {2, 6, 3} and I believe my algorithm is adding more than what is stated since my result was 11 instead of 5 during the JUnit assert. I've attached my setup and here are the symptoms attached below:    
+**Anonymous**: I can't seem to find the bug in my code for the summation of an array of even indices only. The failure inducing-input was {2, 6, 3} and I believe my algorithm is adding more than what is stated since my result was 11 instead of 5 during the JUnit assert. I've attached my setup and here are the symptoms attached below:    
 ![Image](img2.png)  
 &nbsp;   
-Allen (TA): Looking at your setup, it looks like you've made 3 tests in EvensTest.java where 2 have passed and 1 tests has not. You could look into skimming the debug error above from JUnit or you could also consider utilizing JDB. Commands to start setting up JDB following your directoy are:  
+**Allen (TA)**: Looking at your setup, it looks like you've made 3 tests in EvensTest.java where 2 have passed and 1 tests has not. You could look into skimming the debug error above from JUnit or you could also consider utilizing JDB. Commands to start setting up JDB following your directoy are:  
 ```
 javac -g -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java 
 jdb -classpath .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore EvensTest
 ```  
-Anonymous: I was able to set JDB but I don't know where to go besides knowing that the values are different from one. Where should I try locating?  
+**Anonymous**: I was able to set JDB but I don't know where to go besides knowing that the values are different from one. Where should I try locating?  
 &nbsp;    
-Allen (TA): You could try checking how each iterations of sum are added during each iteration. Clearly, your 2 other tests passed due to not having failure-inducing inputs. Your first test for the FII where {2, 6, 3} can be checked for each iteration using jdb. An instance in doing this can be creating an array in your loop that keeps check for each iteration where sum is also simulataneously added. So when your variable "sum" is getting update, update a data that can hold what sum is holding so which data structure can hold each changes of the tested inputs so you can see the changes? Useful commands in JDB should be creating breakpoints where we can locate the changes of sum for the FII test.  
+**Allen (TA)**: You could try checking how each iterations of sum are added during each iteration. Clearly, your 2 other tests passed due to not having failure-inducing inputs. Your first test for the FII where {2, 6, 3} can be checked for each iteration using jdb. An instance in doing this can be creating an array in your loop that keeps check for each iteration where sum is also simulataneously added. So when your variable "sum" is getting update, update a data that can hold what sum is holding so which data structure can hold each changes of the tested inputs so you can see the changes? Useful commands in JDB should be creating breakpoints where we can locate the changes of sum for the FII test.  
 &nbsp;  
-Anonymous: Thank you, I think the hunch of my algorithm adding to much is because I clumsily forgot to omit the iteration where the algoirthm accessed odd indices which is ironic. I chose to use an array to keep a parallel count in response to every new change of variable "sum" and I used the command `>stop at EvensExamples:9`,`>run`, and `>dump testTemp` in JDB to detail more about the bug where I traced back to the conditions of my loop in the algorithm. I had to change `i++` to `i+=2`  in the for loop of my code so the bug was a update counter error. Here is my results using the suggested commands and the passed test after running the bash script again!  
+**Anonymous**: Thank you, I think the hunch of my algorithm adding to much is because I clumsily forgot to omit the iteration where the algoirthm accessed odd indices which is ironic. I chose to use an array to keep a parallel count in response to every new change of variable "sum" and I used the command `>stop at EvensExamples:9`,`>run`, and `>dump testTemp` in JDB to detail more about the bug where I traced back to the conditions of my loop in the algorithm. I had to change `i++` to `i+=2`  in the for loop of my code so the bug was a update counter error. Here is my results using the suggested commands and the passed test after running the bash script again!  
 ![Image](img3.png)  
 ![Image](img4.png)   
 
